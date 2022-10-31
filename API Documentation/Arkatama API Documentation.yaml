@@ -1,0 +1,232 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Arkatama API Documentation
+  contact: {}
+host: example.com
+basePath: /
+securityDefinitions: {}
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /task_categories:
+    post:
+      summary: Create Task Categories
+      tags:
+      - Task Categories
+      operationId: CreateTaskCategories
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: name
+        in: formData
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    put:
+      summary: Update Task Categories by ID
+      tags:
+      - Task Categories
+      operationId: UpdateTaskCategoriesbyID
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: name
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    get:
+      summary: Get Task Categories
+      tags:
+      - Task Categories
+      operationId: GetTaskCategories
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    delete:
+      summary: Delete Task Categories by ID
+      tags:
+      - Task Categories
+      operationId: DeleteTaskCategoriesbyID
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /tasks:
+    post:
+      summary: Create Tasks
+      tags:
+      - Tasks
+      operationId: CreateTasks
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: category_id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: title
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: description
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: start_date
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: finish_date
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: status
+        in: formData
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    put:
+      summary: Edit Tasks by ID
+      tags:
+      - Tasks
+      operationId: EditTasksbyID
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: category_id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: title
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: description
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: start_date
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: finish_date
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: status
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    get:
+      summary: Get Tasks
+      tags:
+      - Tasks
+      operationId: GetTasks
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    delete:
+      summary: Delete Tasks by ID
+      tags:
+      - Tasks
+      operationId: DeleteTasksbyID
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+tags:
+- name: Task Categories
+- name: Tasks

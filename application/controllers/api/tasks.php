@@ -64,6 +64,7 @@ class tasks extends RestController
     public function index_post()
     {
         $data = [
+            'category_id' => $this->post('category_id'),
             'title' => $this->post('title'),
             'description' => $this->post('description'),
             'start_date' => $this->post('start_date'),
@@ -88,7 +89,12 @@ class tasks extends RestController
     {
         $id = $this->put('id');
         $data = [
-            'name' => $this->put('name'),
+            'category_id' => $this->put('category_id'),
+            'title' => $this->put('title'),
+            'description' => $this->put('description'),
+            'start_date' => $this->put('start_date'),
+            'finish_date' => $this->put('finish_date'),
+            'status' => $this->put('status'),
         ];
 
         if (is_null($id)) {
